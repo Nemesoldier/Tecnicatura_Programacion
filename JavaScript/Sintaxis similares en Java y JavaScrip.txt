@@ -1,21 +1,26 @@
 Sintaxis similares entra java y JavaScrip
-*Operadores Simplificados
+*Operadores Simplificados/compuestos
 +=
 -=
 *=
 /=
+%=
+**=
 
 *Operadores Aritmeticos
 +
 -
 *
 /
-
+% //Residuo
+** //Exponente
 *Operadores de Asiganacion
 =
+Los operadores simplificados tambien asignan
 
-*Operadores de Comparacion
-==
+*Operadores de Comparacion(bool)
+== revisa el valor sin importar el tipo de dato
+=== revisa el valor y el tipo tambien
 
 *Documentar
 //  Para una linea de comentario
@@ -33,9 +38,24 @@ Sintaxis similares entra java y JavaScrip
 
 *Operador de Aumento
 ++
+Ejemplo: Let z = ++a; //PreIncremento
+Ejemplo: z = a++; //PosIncremento
 
 *Operador de Decremento
 --
+Ejemplo: Let z = --a; //PreDecremento
+Ejemplo: z = a--; //PosDecremento
 
+*Operador distinto o diferente(bool)
+!= Comprueba valores sin revisar el tipo
+!== Comprueba el valor y tambien el tipo
 
+*Operadores relacionales(bool)
+<
+>
+>=
+<=
 
+Operadores Logicos
+And -> && Doble aspersan
+Or -> despues
