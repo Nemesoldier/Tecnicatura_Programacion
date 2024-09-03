@@ -189,12 +189,122 @@ print(4 in tupla) #Accion booleana, su respuesta es de tipo booleana
 #En tuplas se puede convertir de tupla a lista y de lista a tupla
 
 
+##Repaso de set
+# Para definir un conjunto
+
+conjunto2 = set ()
+conjunto1 = {"bye"}
+conjunto2.add (7)
+conjunto2.add("Hola")
+print(conjunto2)
+conjunto1.add("hola")
+print(conjunto1)
+print(3 not in conjunto1) #pregguntamos si el numero 3 NO esta incluido
+
+#Como hacer la igualdad de 2 conjuntis
+print(conjunto1 == conjunto2)
+
+#Operaciones en conjunto
+conjunto3 = conjunto1 | conjunto2 # La linea une los 2 conjuntos
+print(conjunto3)
+
+conjunto3 = conjunto1 & conjunto2 #Que elemento tienen en comun
+print(conjunto3)
+
+conjunto3 = conjunto1 - conjunto2 #Asigna el valor que esta en el conjunto1 y no en el conjunto2
+print(conjunto3)
+conjunto3 = conjunto2 - conjunto1
+print(conjunto3)
+
+conjunto3 = conjunto1 ^ conjunto2 # elementos que no se comparten o son diferentes entre ambos
+print(conjunto3)
+
+conjunto3 = conjunto1 | conjunto2
+print(conjunto2.issubset(conjunto3)) #Aqui preguntamos si un conjunto es un subconjunto dentro de otro
+print(conjunto1.issubset(conjunto3))
+print(conjunto3.issubset(conjunto1))
+print(conjunto3.issubset(conjunto2))
+
+print(conjunto3.issuperset(conjunto1)) #Preguntamos si los elementos del conjunto1 estan dentro del 3
+print(conjunto3.issuperset(conjunto2)) # Si es verdadero quiere decir que el conjunto 3 es un superconjunto
+print(conjunto2.issuperset(conjunto3))
+
+#Como saber si ambos conjuntos son disconexsos, esto es si comparten elementos en comun
+print(conjunto1.isdisjoint(conjunto2)) #No hay cosas en comun
+
+#Convertir un conjunto totalmente en inmutable
+conjunto1 = frozenset # Esto hacer que el conjunto sea totalmente inmutable
+# No se puede agregar, modificar ni eliminar elementos del conjunto
+
+#Repaso diccionarios
+diccionarioNuevo = {"Azul":"Blue","Rojo":"Red","Verde":"Green","Amarillo":"Yellow"}
+print(diccionarioNuevo)
+
+#como eliminar
+del diccionarioNuevo["Azul"]
+print(diccionarioNuevo)
+
+#Los diccionarios pueden almacenar diferentes tipos de datos
+diccinario2 = {"Ariel":{"Edad":40,"Altura":1.83},"Osvaldo":[45,1,85],"Natalia":[35,1.67]}
+print(diccinario2)
+
+seleccionArgentina = {
+    10:{"Nombre":"Lionel Messi","Edad":35,"Altura":1.70,"Precio": "50 millones","Posicion":"Extremo Derecho"},
+    11:{"Nombre": "Angel Di Maria","Edad":34,"Altura":1.80,"Precio":"12 Millones","Posicion":"Extremo Derecho"},
+    24:{"Nombre": "Paulo Dybala","Edad":28,"Altura":1.77,"Precio":"35 Millones","Posicion":"Media Punta"},
+    19:{"Nombre": "Nicolas Otamendi","Edad":34,"Altura":1.83,"Precio":"3.5 Millones","Posicion":"Defensa Central"},
+    1:{"Nombre": "Franco Armani","Edad":33,"Altura":1.89,"Precio":"3.5 Millones","Posicion":"Portero"}
+}
+for llave, valor in seleccionArgentina.items():
+    print(llave, valor)
 
 
+#Agregar por lo menos 4 jugadores mas al diccionario : seleccionArgentina
+print("Tenemos cargasdors en el diccionario la cantidad de jugadores: ", end=" ")
+print(len(seleccionArgentina))
 
+#Pilas usando listas
+pila = [1, 2, 3]
 
+#Agregar elementos a una pila por el final
+pila.append(4)
+pila.append(5)
+print(pila)
 
+#Sacamos elementos desde el final
+elementoBorrado = pila.pop() #Quita el ultimo elemnto y lo guarda en en la variable
+print(f"Scamos el elementos borrado {elementoBorrado}")
+print(f"La pila ahora quedo asi: {pila}")
 
+#Colas en listas
+#Estructura de datos tipo fifo (first input, first output)
+cola = ["Ariel","Osvaldo","Liliana","Pilar"]
+#Agregamos elementos
+
+cola.append("Natalia")
+cola.append("Jose")
+print(cola)
+
+#Sacamos elementos de la cola
+seRetira = cola.pop(0)
+print(f"Atendido el cliente: {seRetira}")
+print(cola)
+
+seRetira = cola.pop(0)
+print(f"Atendido el cliente: {seRetira}")
+print(cola)
+
+seRetira = cola.pop(0)
+print(f"Atendido el cliente: {seRetira}")
+print(cola)
+
+seRetira = cola.pop(0)
+print(f"Atendido el cliente: {seRetira}")
+print(cola)
+
+seRetira = cola.pop(0)
+print(f"Atendido el cliente: {seRetira}")
+print(cola)
 
 
 
