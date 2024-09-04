@@ -7,4 +7,10 @@ public class Persona {
     String nombre;
     String apellido;
     
+    //Metidos de la clase (Acciones)
+    public void obtenerInformacion(){
+        System.out.println("Nomnbre: "+nombre);
+        System.out.println("Apellido: "+apellido);
+    }
+    
 }
