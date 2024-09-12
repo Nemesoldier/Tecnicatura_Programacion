@@ -7,10 +7,14 @@ public class Persona {
     String nombre;
     String apellido;
     
-    //Metidos de la clase (Acciones)
+    //Metodos de la clase (Acciones)
     public void obtenerInformacion(){
         System.out.println("Nomnbre: "+nombre);
         System.out.println("Apellido: "+apellido);
+    }
+    public int sumarConRetorno(){
+        //int resultado = a + b;
+        return a + b;
     }
     
 }

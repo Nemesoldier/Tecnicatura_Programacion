@@ -12,4 +12,14 @@ public class Aritmetica {
         System.out.println("resultado = " + resultado);
         
     }
+    public int sumarConRetorno(){
+       // int resultado = a + b;
+        return this.a + this.b;
+    }
+    public int sumarconArgumentos(int a, int b){
+        this.a = a;  //El argumento A se asigna al atributo this.
+        this.b = b;
+       // return a + b;
+       return sumarConRetorno();
+    }
 }
