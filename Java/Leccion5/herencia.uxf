@@ -1,0 +1,15 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>390</x><y>20</y><w>210</w><h>230</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+--
+-nombre: String
+-genero: char
+-edad: int------------------------------------------------------------------------------------------
++get Nombre():Str
++setNombre(String):void
++getGenero():char
+setGenero(char): void
++getEdad():int
++setEdad(int):void
++direccion():String
++setDireccion(String):void
+------------------------------------------------------------------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element></diagram>
