@@ -68,7 +68,7 @@ public class Persona {
         sb.append(", genero=").append(genero);
         sb.append(", edad=").append(edad);
         sb.append(", direccion=").append(direccion);
-        
+        sb.append(", ").append(super.toString());
         sb.append('}');
         return sb.toString();
     }
