@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>N Reinas</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    td {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid black;
+      font-size: 24px;
+    }
+    .black { background-color: #999; }
+    .white { background-color: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Problema de las N Reinas</h1>
+  <div id="tablero"></div>
+  <p id="solucion"></p>
+
+  <script>
+    const N = 8; // puedes cambiar este valor
+    let soluciones = [];
+    let tablero = [];
+
+    function esSeguro(tablero, fila, col) {
+      for (let i = 0; i < fila; i++) {
+        if (tablero[i] === col || 
+            tablero[i] - i === col - fila || 
+            tablero[i] + i === col + fila) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function resolverNReinas(fila = 0) {
+      if (fila === N) {
+        soluciones.push([...tablero]);
+        return;
+      }
+      for (let col = 0; col < N; col++) {
+        if (esSeguro(tablero, fila, col)) {
+          tablero[fila] = col;
+          resolverNReinas(fila + 1);
+        }
+      }
+    }
+
+    function mostrarTablero(solucion) {
+      const contenedor = document.getElementById("tablero");
+      contenedor.innerHTML = "";
+      const tabla = document.createElement("table");
+      for (let i = 0; i < N; i++) {
+        const fila = document.createElement("tr");
+        for (let j = 0; j < N; j++) {
+          const celda = document.createElement("td");
+          celda.className = (i + j) % 2 === 0 ? "white" : "black";
+          if (solucion[i] === j) celda.textContent = "♛";
+          fila.appendChild(celda);
+        }
+        tabla.appendChild(fila);
+      }
+      contenedor.appendChild(tabla);
+    }
+
+    resolverNReinas();
+    const primera = soluciones[0];
+    mostrarTablero(primera);
+    document.getElementById("solucion").textContent = 
+      "Índices de las reinas: [" + primera.join(", ") + "]";
+  </script>
+</body>
+</html>
